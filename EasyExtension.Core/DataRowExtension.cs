@@ -2,7 +2,7 @@
 using System.Data;
 using EasyExtension;
 
-namespace System.Data.EasyData
+namespace EasyExtension.Data
 {
     /// <summary>
     /// Extension for DataRow

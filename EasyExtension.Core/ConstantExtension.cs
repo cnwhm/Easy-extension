@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using System.Text;
 
-namespace EasyExtension.Core
+namespace EasyExtension
 {
     public static class ConstantExtension
     {
