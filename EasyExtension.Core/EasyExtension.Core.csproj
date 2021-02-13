@@ -2,6 +2,8 @@
 
   <PropertyGroup>
     <TargetFramework>netcoreapp3.1</TargetFramework>
+    <RootNamespace>EasyExtension</RootNamespace>
+    <AssemblyName>EasyExtension</AssemblyName>
   </PropertyGroup>
 
 </Project>

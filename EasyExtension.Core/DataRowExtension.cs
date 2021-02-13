@@ -162,7 +162,7 @@ namespace EasyExtension.Data
         /// <param name="columnName">we will use dataRow[0] instead of empty columnName</param>
         /// <param name="defaultVal">the value should return if convert is failed or your data row value is DBNull</param>
         /// <returns></returns>
-        public static string DataRowToString(this DataRow dataRow, string columnName, string defaultVal = "")
+        public static string ToString(this DataRow dataRow, string columnName, string defaultVal = "")
         {
             if (dataRow == null)
                 throw new ArgumentNullException("dataRow");
