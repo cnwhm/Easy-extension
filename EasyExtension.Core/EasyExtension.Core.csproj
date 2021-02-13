@@ -21,6 +21,9 @@ More infomation please visit :
 https://github.com/cnwhm/Easy-extension
 
 Thanks for using and enjoy.  And i'm pleasure you could join us</PackageReleaseNotes>
+    <Version>1.0.1</Version>
+    <AssemblyVersion>1.0.1.1</AssemblyVersion>
+    <FileVersion>1.0.1.1</FileVersion>
   </PropertyGroup>
 
 </Project>
