@@ -1,6 +1,8 @@
 # Easy-extension
 Here is a sample for how to use
-    class Program
+
+
+class Program
     {
         static void Main(string[] args)
         { 
