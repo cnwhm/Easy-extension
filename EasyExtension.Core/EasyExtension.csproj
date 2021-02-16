@@ -8,22 +8,17 @@
     <Authors>cnwhm</Authors>
     <Company>-</Company>
     <Product />
-    <Description>Just using these namespace and enjoy coding.
-Easy coding ,easy using , easy convert , easy to understand . It's an awesome extension for type convert;
+    <Description>Just use these namespace and enjoy coding.
+Easy to code ,easy to use , easy to convert , easy to understand . It's an awesome extension for type convert. Include of DataRow , String , Integer and any other primitive type
 
 More infomation please visit :
 https://github.com/cnwhm/Easy-extension
 
-Thanks for using and enjoy.  And i'm pleasure you could join us</Description>
-    <PackageReleaseNotes>Easy coding ,easy using , easy convert , easy to understand . It's an awesome extension for type convert;
-
-More infomation please visit :
-https://github.com/cnwhm/Easy-extension
-
-Thanks for using and enjoy.  And i'm pleasure you could join us</PackageReleaseNotes>
-    <Version>1.0.2</Version>
-    <AssemblyVersion>1.0.1.2</AssemblyVersion>
-    <FileVersion>1.0.1.2</FileVersion>
+Thanks for use and enjoy.  And i'm pleasure you could join us</Description>
+    <PackageReleaseNotes>no feature update</PackageReleaseNotes>
+    <Version>1.0.3</Version>
+    <AssemblyVersion>1.0.1.3</AssemblyVersion>
+    <FileVersion>1.0.1.3</FileVersion>
   </PropertyGroup>
 
 </Project>
