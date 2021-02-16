@@ -1,8 +1,7 @@
 # Easy-extension
 Here is a sample for how to use
 
-
-class Program
+    class Program
     {
         static void Main(string[] args)
         { 
@@ -11,7 +10,6 @@ class Program
             dt.Columns.Add("bolean", typeof(bool));
             dt.Columns.Add("date", typeof(DateTime));
             dt.Columns.Add("string", typeof(string));
-
             DataRow dr = dt.NewRow();
             dr["idx"] = 0;
             dr["bolean"] = true;
