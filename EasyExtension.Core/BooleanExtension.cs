@@ -15,5 +15,13 @@ namespace EasyExtension
         {
             return _val ? 1 : 0;
         }
+        public static short ToInt16(this bool _val)
+        {
+            return _val ? (short)1 : (short)0;
+        }
+        public static ushort ToUInt16(this bool _val)
+        {
+            return _val ? (ushort)1 : (ushort)0;
+        }
     }
 }
