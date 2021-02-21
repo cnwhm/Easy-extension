@@ -16,9 +16,9 @@ https://github.com/cnwhm/Easy-extension
 
 Thanks for use and enjoy.  And i'm pleasure you could join us</Description>
     <PackageReleaseNotes>no feature update</PackageReleaseNotes>
-    <Version>1.0.3</Version>
-    <AssemblyVersion>1.0.1.3</AssemblyVersion>
-    <FileVersion>1.0.1.3</FileVersion>
+    <Version>1.0.4</Version>
+    <AssemblyVersion>1.0.1.4</AssemblyVersion>
+    <FileVersion>1.0.1.4</FileVersion>
   </PropertyGroup>
 
 </Project>

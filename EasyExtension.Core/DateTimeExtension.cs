@@ -12,5 +12,13 @@ namespace EasyExtension
         {
             return date.Date.AddDays(1).AddMilliseconds(-1).ToString(defaultFormat);
         }
+        public static DateTime FormatBeginDate(this DateTime date)
+        {
+            return date.Date;
+        }
+        public static DateTime FormatEndDate(this DateTime date)
+        {
+            return date.Date.AddDays(1).AddMilliseconds(-1);
+        }
     }
 }
