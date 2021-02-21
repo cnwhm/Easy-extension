@@ -8,20 +8,16 @@
     <Authors>cnwhm</Authors>
     <Company>-</Company>
     <Product />
-    <Description>Just using these namespace and enjoy coding.
-Easy coding ,easy using , easy convert , easy to understand . It's an awesome extension for type convert;
-
-More infomation please visit :
+    <Description>It's an awesome extension for type convert;
+you can use it like : 
+DataRow.ToBoolean(ColumnName); DataRow.ToInt32(ColumnName,DefaultValue); 
+wether source is DBNull or any other illegally type ,we provide a default legal return
+More infomation or sample code please visit :
 https://github.com/cnwhm/Easy-extension
 
 Thanks for using and enjoy.  And i'm pleasure you could join us</Description>
-    <PackageReleaseNotes>Easy coding ,easy using , easy convert , easy to understand . It's an awesome extension for type convert;
-
-More infomation please visit :
-https://github.com/cnwhm/Easy-extension
-
-Thanks for using and enjoy.  And i'm pleasure you could join us</PackageReleaseNotes>
-    <Version>1.0.2</Version>
+    <PackageReleaseNotes>Thx</PackageReleaseNotes>
+    <Version>1.0.4</Version>
     <AssemblyVersion>1.0.1.2</AssemblyVersion>
     <FileVersion>1.0.1.2</FileVersion>
   </PropertyGroup>
