@@ -66,6 +66,12 @@ namespace Sample
             string strsample = "ddaasa";
             int mint = strsample.ToInt32(-1);
             ushort mushort = strsample.ToUShort(0);
+
+
+            DataTable dataTable = lst.ToDataTable();
+            List<Test> testList = dataTable.ToList<Test>();
+
+
             Console.ReadKey();
         }
     }
