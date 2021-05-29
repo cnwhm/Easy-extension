@@ -56,10 +56,10 @@ namespace Sample
             Console.WriteLine($"To end date :\t{dtEndDate}");
 
             //others
-            List<Test> lst = new List<Test>();
+            List<EntityModel> lst = new List<EntityModel>();
             for (int i = 0; i < 5; i++)
             {
-                lst.Add(new Test() { ID = i.ToString(), Name = $"name{i}", Count = i });
+                lst.Add(new EntityModel() { ID = i.ToString(), Name = $"name{i}", Count = i });
             }
 
             List<int> filter = lst.ToList(l => l.Count);
@@ -69,13 +69,34 @@ namespace Sample
 
 
             DataTable dataTable = lst.ToDataTable();
-            List<Test> testList = dataTable.ToList<Test>();
+            List<EntityModel> testList = dataTable.ToList<EntityModel>();
 
+            int intResult = true.ToInt32();
+            short shortResult = false.ToInt16();
+            ushort ushortResult = true.ToUInt16();
+
+            bool convertBoolean = 123.ToBoolean();
+            ushort convertUshort = 123.ToUshort();
+
+            //return 123
+            int strToInt = "123".ToInt32();
+            //return 0
+            int strToIntDefault = "123ABC".ToInt32(0);
+
+            //return 223
+            ushort strToUshort = "223".ToUShort();
+            //return 1
+            ushort strToUshortDefault = "-1234".ToUShort(1);
+
+            //return true
+            bool strToBoolean = "223".ToBoolean();
+            //return 1
+            bool strToBooleanDefault = "sdfv".ToBoolean();
 
             Console.ReadKey();
         }
     }
-    class Test
+    class EntityModel
     {
        public string ID { get; set; }
        public string Name { get; set; }
