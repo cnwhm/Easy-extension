@@ -2,7 +2,7 @@
 
 namespace EasyExtension
 {
-    public static class ConstantExtension
+    public static class IntegerExtension
     { 
         /// <summary>
         /// 
