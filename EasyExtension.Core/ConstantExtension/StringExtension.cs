@@ -47,6 +47,32 @@ namespace EasyExtension
             else
                 return param == "0" ? false : true;
         }
-         
+        /// <summary>
+        /// return paresed result if convert sucessed
+        /// </summary>
+        /// <param name="param"></param>
+        /// <param name="defaultReturn">0=DateTime.Now 1=DateTime.MinValue  2=DateTime.MaxValue</param>
+        /// <returns></returns>
+        public static DateTime ToDateTime(this string param,byte defaultReturn=0)
+        {
+            DateTime result;
+            if(DateTime.TryParse(param,out result))
+            {
+                return result;
+            }
+            else
+            {
+                switch (defaultReturn)
+                {
+                    default:
+                    case 0:
+                        return DateTime.Now;
+                    case 1:
+                        return DateTime.MinValue;
+                    case 2:
+                        return DateTime.MaxValue;
+                }
+            }
+        }
     }
 }

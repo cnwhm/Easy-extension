@@ -41,8 +41,8 @@ namespace Sample
             DateTime date = DateTime.Now;
             Console.WriteLine($"Source :\t{date}");
             Console.WriteLine("----------------------------------------------------------");
-            string startDate = date.ToBeginDate();
-            string endDate = date.ToEndDate();
+            string startDate = date.FormatBeginDate();
+            string endDate = date.FormatEndDate();
             Console.WriteLine($"To begin date string:\t{startDate}");
             Console.WriteLine($"To end date string:\t{endDate}");
             Console.WriteLine();
@@ -50,8 +50,8 @@ namespace Sample
             Console.WriteLine("------------Format Date-------------");
             Console.WriteLine($"Source :\t{date}");
             Console.WriteLine("----------------------------------------------------------");
-            DateTime dtStartDate = date.FormatBeginDate();
-            DateTime dtEndDate = date.FormatEndDate();
+            DateTime dtStartDate = date.ToBeginDate();
+            DateTime dtEndDate = date.ToEndDate();
             Console.WriteLine($"To begin date :\t{dtStartDate}");
             Console.WriteLine($"To end date :\t{dtEndDate}");
 
@@ -92,6 +92,8 @@ namespace Sample
             bool strToBoolean = "223".ToBoolean();
             //return 1
             bool strToBooleanDefault = "sdfv".ToBoolean();
+
+            DateTime convertDate = "123".ToDateTime(2);
 
             Console.ReadKey();
         }

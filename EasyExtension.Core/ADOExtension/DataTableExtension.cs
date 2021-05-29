@@ -71,7 +71,7 @@ namespace EasyExtension.Data
             var dataTable = new DataTable();
             if (list.Count > 0)
             {
-                PropertyInfo[] propertys = list[0].GetType().GetProperties();
+                PropertyInfo[] propertys = typeof(T).GetProperties();
                 foreach (PropertyInfo pi in propertys)
                 {
                     dataTable.Columns.Add(pi.Name, pi.PropertyType);
