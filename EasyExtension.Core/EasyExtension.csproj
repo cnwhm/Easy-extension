@@ -1,7 +1,7 @@
 ﻿<Project Sdk="Microsoft.NET.Sdk">
 
   <PropertyGroup>
-    <TargetFrameworks>net35;net40;net45;netstandard2.0;netcoreapp3.1;net5.0</TargetFrameworks>
+    <TargetFrameworks>net35;net40;net45;netstandard2.0;netcoreapp3.1;net6.0</TargetFrameworks>
     <RootNamespace>EasyExtension</RootNamespace>
     <AssemblyName>EasyExtension</AssemblyName>
     <GeneratePackageOnBuild>true</GeneratePackageOnBuild>
@@ -16,11 +16,10 @@ More infomation or sample code please visit :
 https://github.com/cnwhm/Easy-extension
 
 Thanks for using and enjoy.  And i'm pleasure you could join us</Description>
-    <PackageReleaseNotes>Reversal return value for DateTimeExtension   FormatBeginDate，FormatEndDate to ToBeginDate,ToEndDate
-Add Extension String to DateTime</PackageReleaseNotes>
-    <Version>1.0.6</Version>
-    <AssemblyVersion>1.0.2.1</AssemblyVersion>
-    <FileVersion>1.0.2.1</FileVersion>
+    <PackageReleaseNotes>.Net 6.0 support</PackageReleaseNotes>
+    <Version>1.1.0</Version>
+    <AssemblyVersion>1.1.0.0</AssemblyVersion>
+    <FileVersion>1.1.0.0</FileVersion>
   </PropertyGroup>
 
 </Project>
