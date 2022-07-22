@@ -176,5 +176,21 @@ namespace EasyExtension.Data
             }
             return result;
         }
+
+        public static decimal ToDecimal(this DataRow dataRow, string columnName, decimal defaultVal = 0)
+        {
+            if (dataRow == null)
+                throw new ArgumentNullException("dataRow");
+            decimal result = defaultVal;
+            if (!string.IsNullOrEmpty(columnName))
+            {
+                result = GlobalExt.ObjectToDecimal(dataRow[columnName]);
+            }
+            else
+            {
+                result = GlobalExt.ObjectToDecimal(dataRow[0]);
+            }
+            return result;
+        }
     }
 }

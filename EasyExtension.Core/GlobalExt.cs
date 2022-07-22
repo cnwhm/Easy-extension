@@ -25,23 +25,33 @@ namespace EasyExtension
             }
             return false;
         }
+
         public static string ObjectToString(object val, string defaultValue = "")
         {
             if (Convert.IsDBNull(val) || val == null)
                 return defaultValue;
             return val.ToString();
         }
+
         public static int ObjectToInt32(object val, int defaultVal = 0)
         {
             if (Convert.IsDBNull(val) || val == null)
                 return defaultVal;
             return Convert.ToInt32(val);
         }
+
         public static ushort ObjectToUshort(object val, ushort defaultVal = 0)
         {
             if (Convert.IsDBNull(val) || val == null)
                 return defaultVal;
             return Convert.ToUInt16(val);
+        }
+
+        public static decimal ObjectToDecimal(object val, decimal defaultVal = 0)
+        {
+            if (Convert.IsDBNull(val) || val == null)
+                return defaultVal;
+            return Convert.ToDecimal(val);
         }
     }
     public enum DateTimeDefaultReturn
