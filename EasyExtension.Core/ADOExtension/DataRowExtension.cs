@@ -91,27 +91,19 @@ namespace EasyExtension.Data
         {
             if (dataRow == null)
                 throw new ArgumentNullException("dataRow");
+
+            if (!string.IsNullOrEmpty(columnName) && !Convert.IsDBNull(dataRow[columnName]))
+            {
+                return Convert.ToDateTime(dataRow[columnName]);
+            }
+
             DateTime dtNow = DateTime.Now;
             if (defaultDtVal == DateTimeDefaultReturn.Min)
                 dtNow = DateTime.MinValue;
             if (defaultDtVal == DateTimeDefaultReturn.Max)
                 dtNow = DateTime.MaxValue;
-            string result = string.Empty;
-            if (!string.IsNullOrEmpty(columnName))
-            {
-                result = GlobalExt.ObjectToString(dataRow[columnName]);
-            }
-            else
-            {
-                result = GlobalExt.ObjectToString(dataRow[0]);
-            }
-            if (!string.IsNullOrEmpty(result))
-            {
-                DateTime.TryParse(result, out dtNow);
-                return dtNow;
-            }
 
-            return DateTime.Now;
+            return dtNow;
         }
         /// <summary>
         /// Convert cell value to DateTime string
@@ -124,19 +116,13 @@ namespace EasyExtension.Data
         {
             if (dataRow == null)
                 throw new ArgumentNullException("dataRow");
-            DateTime dtNow = DateTime.Now;
-            try
+            DateTime dtNow;
+
+            if (!string.IsNullOrEmpty(columnName) && !Convert.IsDBNull(dataRow[columnName]))
             {
-                if (!string.IsNullOrEmpty(columnName))
-                {
-                    dtNow = Convert.ToDateTime(dataRow[columnName]);
-                }
-                else
-                {
-                    dtNow = Convert.ToDateTime(dataRow[0]);
-                }
+                dtNow = Convert.ToDateTime(dataRow[columnName]);
             }
-            catch (Exception)
+            else
             {
                 switch (defaultDtVal)
                 {
@@ -151,6 +137,7 @@ namespace EasyExtension.Data
                         break;
                 }
             }
+
             return dtNow.ToString(format);
         }
 
@@ -189,6 +176,38 @@ namespace EasyExtension.Data
             else
             {
                 result = GlobalExt.ObjectToDecimal(dataRow[0]);
+            }
+            return result;
+        }
+
+        public static double ToDouble(this DataRow dataRow, string columnName, double defaultVal = 0)
+        {
+            if (dataRow == null)
+                throw new ArgumentNullException("dataRow");
+            double result = defaultVal;
+            if (!string.IsNullOrEmpty(columnName))
+            {
+                result = GlobalExt.ObjectToDouble(dataRow[columnName]);
+            }
+            else
+            {
+                result = GlobalExt.ObjectToDouble(dataRow[0]);
+            }
+            return result;
+        }
+
+        public static float ToFloat(this DataRow dataRow, string columnName, float defaultVal = 0)
+        {
+            if (dataRow == null)
+                throw new ArgumentNullException("dataRow");
+            float result = defaultVal;
+            if (!string.IsNullOrEmpty(columnName))
+            {
+                result = GlobalExt.ObjectToFloat(dataRow[columnName]);
+            }
+            else
+            {
+                result = GlobalExt.ObjectToFloat(dataRow[0]);
             }
             return result;
         }

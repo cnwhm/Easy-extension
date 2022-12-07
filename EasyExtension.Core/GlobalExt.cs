@@ -53,6 +53,20 @@ namespace EasyExtension
                 return defaultVal;
             return Convert.ToDecimal(val);
         }
+
+        public static double ObjectToDouble(object val, double defaultVal = 0)
+        {
+            if (Convert.IsDBNull(val) || val == null)
+                return defaultVal;
+            return Convert.ToDouble(val);
+        }
+
+        public static float ObjectToFloat(object val, float defaultVal = 0)
+        {
+            if (Convert.IsDBNull(val) || val == null)
+                return defaultVal;
+            return Convert.ToSingle(val);
+        }
     }
     public enum DateTimeDefaultReturn
     {
