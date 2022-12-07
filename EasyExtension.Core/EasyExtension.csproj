@@ -16,8 +16,9 @@ More infomation or sample code please visit :
 https://github.com/cnwhm/Easy-extension
 
 Thanks for using and enjoy.  And i'm pleasure you could join us</Description>
-    <PackageReleaseNotes>.Net 6.0 support</PackageReleaseNotes>
-    <Version>1.1.1</Version>
+    <PackageReleaseNotes>datetime convertion bug fix
+add double ,float datarow extensions</PackageReleaseNotes>
+    <Version>1.1.2</Version>
     <AssemblyVersion>1.1.0.1</AssemblyVersion>
     <FileVersion>1.1.0.1</FileVersion>
     <PackageProjectUrl>https://github.com/cnwhm/Easy-extension</PackageProjectUrl>
