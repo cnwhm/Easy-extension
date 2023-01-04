@@ -74,15 +74,30 @@ namespace EasyExtension.Data
                 PropertyInfo[] propertys = typeof(T).GetProperties();
                 foreach (PropertyInfo pi in propertys)
                 {
+                    if (pi.PropertyType.IsGenericType && pi.PropertyType.GetGenericTypeDefinition() == typeof(Nullable<>))
+                    {
+                        dataTable.Columns.Add(pi.Name, typeof(string));
+                        continue;
+                    }
+
                     dataTable.Columns.Add(pi.Name, pi.PropertyType);
                 }
+
                 for (int i = 0; i < list.Count; i++)
                 {
                     ArrayList tempList = new ArrayList();
                     foreach (PropertyInfo pi in propertys)
                     {
                         object obj = pi.GetValue(list[i], null);
-                        tempList.Add(obj);
+
+                        if (pi.PropertyType.IsGenericType && pi.PropertyType.GetGenericTypeDefinition() == typeof(Nullable<>))
+                        {
+                            tempList.Add(obj == null ? string.Empty : obj.ToString());
+                        }
+                        else
+                        {
+                            tempList.Add(obj);
+                        }
                     }
                     object[] array = tempList.ToArray();
                     dataTable.LoadDataRow(array, true);
