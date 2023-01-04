@@ -105,6 +105,26 @@ namespace EasyExtension.Data
 
             return dtNow;
         }
+
+        /// <summary>
+        /// Convert cell value to DateTime
+        /// </summary>
+        /// <param name="dataRow"></param>
+        /// <param name="columnName"></param>
+        /// <returns>Default is null</returns>
+        public static DateTime? ToDateTime(this DataRow dataRow, string columnName)
+        {
+            if (dataRow == null)
+                throw new ArgumentNullException("dataRow");
+
+            if (!string.IsNullOrEmpty(columnName) && !Convert.IsDBNull(dataRow[columnName]))
+            {
+                return Convert.ToDateTime(dataRow[columnName]);
+            }
+
+            return null;
+        }
+
         /// <summary>
         /// Convert cell value to DateTime string
         /// </summary>

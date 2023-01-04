@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Runtime.CompilerServices;
 using System.Text;
 
 namespace EasyExtension
@@ -73,6 +74,39 @@ namespace EasyExtension
                         return DateTime.MaxValue;
                 }
             }
+        }
+
+        /// <summary>
+        /// return paresed result if convert sucessed
+        /// </summary>
+        /// <param name="param"></param>
+        /// <returns></returns>
+        public static DateTime? ToDateTime(this string param)
+        {
+            if (param.IsNullOrWhiteSpace())
+            {
+                return null;
+            }
+
+            DateTime result;
+            if (DateTime.TryParse(param, out result))
+            {
+                return result;
+            }
+            else
+            {
+                return null;
+            }
+        }
+
+        /// <summary>
+        /// null or whiteSpace
+        /// </summary>
+        /// <param name="s"></param>
+        /// <returns></returns>
+        public static bool IsNullOrWhiteSpace(this string s)
+        {
+            return string.IsNullOrWhiteSpace(s);
         }
     }
 }
