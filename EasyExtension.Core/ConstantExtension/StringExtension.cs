@@ -81,7 +81,7 @@ namespace EasyExtension
         /// </summary>
         /// <param name="param"></param>
         /// <returns></returns>
-        public static DateTime? ToDateTime(this string param)
+        public static DateTime? ToDateTimeNullable(this string param)
         {
             if (param.IsNullOrWhiteSpace())
             {

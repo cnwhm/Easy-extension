@@ -112,7 +112,7 @@ namespace EasyExtension.Data
         /// <param name="dataRow"></param>
         /// <param name="columnName"></param>
         /// <returns>Default is null</returns>
-        public static DateTime? ToDateTime(this DataRow dataRow, string columnName)
+        public static DateTime? ToDateTimeNullable(this DataRow dataRow, string columnName)
         {
             if (dataRow == null)
                 throw new ArgumentNullException("dataRow");
