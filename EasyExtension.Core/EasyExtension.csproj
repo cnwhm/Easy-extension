@@ -18,7 +18,7 @@ https://github.com/cnwhm/Easy-extension
 Thanks for using and enjoy.  And i'm pleasure you could join us</Description>
     <PackageReleaseNotes>add nullable datetime convert
 string extension etc..</PackageReleaseNotes>
-    <Version>1.1.4</Version>
+    <Version>1.1.5</Version>
     <AssemblyVersion>1.1.0.1</AssemblyVersion>
     <FileVersion>1.1.0.1</FileVersion>
     <PackageProjectUrl>https://github.com/cnwhm/Easy-extension</PackageProjectUrl>
